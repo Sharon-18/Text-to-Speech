@@ -1,0 +1,15 @@
+import pyttsx3
+from pyttsx3 import engine
+engine = pyttsx3.init()
+voices = engine.getProperty("voices")
+voice = engine.setProperty("voice",voices[1].id)
+                           
+text = input("Enter ur text =")
+
+def speak(text):
+    engine.say(text)
+    engine.runAndWait()
+speak(text) 
+
+
+
